@@ -5,7 +5,7 @@ import { store } from './app/store';
 import App from './App';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import "bulma/css/bulma.css"
+import "./style/bulma.css"
 import axios from 'axios';
 
 axios.defaults.withCredentials = true;
