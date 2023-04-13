@@ -16,4 +16,13 @@ module.exports = {
     'slick-dots',
     'slick-active'
   ],
+  options: {
+    minify: true,
+    info: true,
+    whitelist: ['react-modal', 'slick-slider', 'slick-list', 'slick-track', 'slick-slide', 'slick-initialized', 'slick-next', 'slick-prev', 'slick-dots', 'slick-active'],
+    whitelistPatterns: [/^slick-/, /.*slick.*/],
+    rejected: true,
+  }
 };
+
+{/* <link rel="stylesheet" href="dist/bundle.css"></link> */}

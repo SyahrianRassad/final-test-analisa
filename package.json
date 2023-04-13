@@ -25,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "purgecss": "purgecss --config purgecss.config.js --output ./src/style --rejected"
+    "purgecss": "purgecss --config purgecss.config.js --output ./src/style --rejected",
+    "purifycss": "purifycss --config purify.config.js --min --out ./src/dist/bundle.min.css ./node_modules/bulma/css/bulma.css ./node_modules/slick-carousel/slick/slick.css ./node_modules/slick-carousel/slick/slick-theme.css ./src/**/*.jsx ./src/**/*.js",
+    "uncss": "uncss http://localhost:3000 --ignore '/^\\\\.slick-carousel.*/'"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +46,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "glob": "^9.3.4",
+    "purify-css": "^1.2.5",
+    "uncss": "^0.17.3"
   }
 }

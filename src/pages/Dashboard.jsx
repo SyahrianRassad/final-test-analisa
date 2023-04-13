@@ -1,15 +1,18 @@
-import React from 'react'
-import AnnounceSlider from '../components/AnnounceSlider'
-import ProductListHome from '../components/ProductListHome'
-import Layout from './Layout'
+import React, { lazy, Suspense } from 'react';
+
+const Layout = lazy(() => import('./Layout'));
+const AnnounceSlider = lazy(() => import('../components/AnnounceSlider'));
+const ProductListHome = lazy(() => import('../components/ProductListHome'));
 
 const Dashboard = () => {
   return (
    <Layout>
-     <AnnounceSlider/>
-     <br />
-     <br />
-     <ProductListHome/>
+    <Suspense fallback={<div>Loading...</div>}>
+      <AnnounceSlider/>
+      <br />
+      <br />
+      <ProductListHome/>
+    </Suspense>
    </Layout>
   )
 }
